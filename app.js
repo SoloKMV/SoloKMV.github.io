@@ -1,11 +1,15 @@
 let tg = window.Telegram.WebApp;
 
+
+
 tg.expand();
 
 tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
 
+var WebApp = window.Telegram.WebApp;
 
+WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
 
 let item = "";
 
