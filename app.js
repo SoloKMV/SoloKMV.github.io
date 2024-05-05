@@ -4,7 +4,7 @@
 
 let tg = window.Telegram.WebApp;
 
-
+tg.showAlert(`Добро пожаловать!`);
 
 tg.expand();
 
@@ -12,7 +12,7 @@ tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
 
 
-tg.showAlert(`Добро пожаловать!`);
+
 
 let item = "";
 
