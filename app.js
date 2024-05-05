@@ -5,7 +5,9 @@ tg.expand();
 tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
 
+var WebApp = window.Telegram.WebApp;
 
+WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
 
 let initDataURLSP = new URLSearchParams(WebApp.initData);
 var hash = initDataURLSP.get('hash');
@@ -105,13 +107,6 @@ btn6.addEventListener("click", function(){
 	}
 });
 
-var WebApp = window.Telegram.WebApp;
-
-WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
-
-Telegram.WebApp.onEvent("mainButtonClicked", function(){
-	tg.sendData(item);
-});
 
 
 let usercard = document.getElementById("usercard");
