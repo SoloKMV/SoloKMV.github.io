@@ -1,4 +1,5 @@
 let tg = window.Telegram.WebApp;
+tg
 tg.expand();
 tg.MainButton.textColor = '#FFFFFF';
 tg.MainButton.color = '#2cab37';
@@ -72,6 +73,7 @@ btn6.addEventListener("click", function(){
 
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
+    tg.showAlert(`Добро пожаловать!`);
 	tg.sendData(item);
 });
 
