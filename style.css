@@ -1,13 +1,14 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-size: 18px;
+	font-size: 16px;
 	color: var(--tg-theme-text-color);
 	background: var(--tg-theme-bg-color);
+	font-family: Helvetica;
 }
 
 .container {
-	max-width: 390px;
+	max-width: 500px;
 }
 
 .inner {
@@ -17,7 +18,7 @@ body {
 }
 
 .img {
-	width: 150px;
+	width: 110px;
 }
 
 .item {
@@ -26,7 +27,7 @@ body {
 
 .btn {
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 10px 15px;
 	border: none;
 	background: rgb(248, 168, 24);
 	border-radius: 10px;
