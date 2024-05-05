@@ -9,28 +9,7 @@ var WebApp = window.Telegram.WebApp;
 
 WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
 
-let initDataURLSP = new URLSearchParams(WebApp.initData);
-var hash = initDataURLSP.get('hash');
 
-initDataURLSP.delete('hash');
-initDataURLSP.sort();
-var checkDataString = initDataURLSP.toString().replaceAll('&', '\n');
-
-let xhrURL = new URL('https://<your_domain>/<userIsValid>');
-xhrURL.searchParams.set('hash', hash);
-xhrURL.searchParams.set('checkDataString', checkDataString);
-
-let xhr = new XMLHttpRequest();
-xhr.open('GET', xhrURL);
-xhr.send();
-xhr.onload = function() {
-    if (JSON.parse(xhr.response).result == true) {
-      WebApp.showAlert(`Добро пожаловать, ${WebApp.WebAppUser.username}.`);
-    } else {
-      WebApp.showAlert("Ты что, хакер?");
-      WebApp.close();
-    }
-}
 
 let item = "";
 
