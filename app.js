@@ -75,9 +75,7 @@ btn6.addEventListener("click", function(){
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
     tg.showAlert(`Добро пожаловать!`);
-	//tg.sendData(item);
-	let xhrURL = new URL('https://api.telegram.org/bot7017599936:AAFu-ZwdnjU-Cdl3PbGfBehHZOMOR5tCI7M/createInvoiceLink');
-    Console.log(xhrURL)
+let xhrURL = new URL('https://api.telegram.org/bot7017599936:AAFu-ZwdnjU-Cdl3PbGfBehHZOMOR5tCI7M/createInvoiceLink');
     xhrURL.searchParams.set('title', 'title');
     xhrURL.searchParams.set('description', 'description');
     xhrURL.searchParams.set('payload', 'some_invoice');
