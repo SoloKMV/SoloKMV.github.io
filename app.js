@@ -1,4 +1,5 @@
 let tg = window.Telegram.WebApp;
+document.getElementById('webview_data').innerHTML = JSON.stringify(DemoApp.initDataUnsafe, null, 2);
 tg
 tg.expand();
 tg.MainButton.textColor = '#FFFFFF';
