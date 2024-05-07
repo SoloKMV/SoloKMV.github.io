@@ -335,7 +335,7 @@ const DemoApp = {
 document.getElementById('webview_data').innerHTML = JSON.stringify(DemoApp.initDataUnsafe, null, 2);
 
 
-checkInitData() {
+checkInitData() = {
             const webViewStatus = document.querySelector('#webview_data_status');
             if (DemoApp.initDataUnsafe.query_id &&
                 DemoApp.initData &&
@@ -352,7 +352,7 @@ checkInitData() {
                     }
                 });
             }
-        }
+        };
 
 
 
