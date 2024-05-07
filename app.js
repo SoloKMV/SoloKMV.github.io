@@ -1,7 +1,5 @@
 let tg = window.Telegram.WebApp;
 
-
-
 const DemoApp = {
         initData      : Telegram.WebApp.initData || '',
         initDataUnsafe: Telegram.WebApp.initDataUnsafe || {},
@@ -321,6 +319,7 @@ const DemoApp = {
         }
     }
 
+
  const DemoAppInitData = {
         init() {
             DemoApp.init();
@@ -353,7 +352,8 @@ checkInitData() {
                     }
                 });
             }
-        }
+        },
+}
 
 
 
