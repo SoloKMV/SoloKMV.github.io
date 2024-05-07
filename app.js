@@ -317,7 +317,7 @@ const DemoApp = {
                 onCallback && onCallback({error: 'Server error'});
             });
         }
-    }
+    };
 
 
  const DemoAppInitData = {
@@ -334,25 +334,6 @@ const DemoApp = {
 
 document.getElementById('webview_data').innerHTML = JSON.stringify(DemoApp.initDataUnsafe, null, 2);
 
-
-checkInitData() = {
-            const webViewStatus = document.querySelector('#webview_data_status');
-            if (DemoApp.initDataUnsafe.query_id &&
-                DemoApp.initData &&
-                webViewStatus.classList.contains('status_need')
-            ) {
-                webViewStatus.classList.remove('status_need');
-                DemoApp.apiRequest('checkInitData', {}, function (result) {
-                    if (result.ok) {
-                        webViewStatus.textContent = 'Hash is correct (async)';
-                        webViewStatus.className   = 'ok';
-                    } else {
-                        webViewStatus.textContent = result.error + ' (async)';
-                        webViewStatus.className   = 'err';
-                    }
-                });
-            }
-        };
 
 
 
