@@ -321,7 +321,6 @@ const DemoApp = {
         }
     }
 
-
  const DemoAppInitData = {
         init() {
             DemoApp.init();
@@ -354,7 +353,7 @@ checkInitData() {
                     }
                 });
             }
-        },
+        }
 
 
 
