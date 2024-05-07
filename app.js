@@ -75,7 +75,23 @@ btn6.addEventListener("click", function(){
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
     tg.showAlert(`Добро пожаловать!`);
-	tg.sendData(item);
+	//tg.sendData(item);
+	let xhrURL = new URL('https://api.telegram.org/bot7017599936:AAFu-ZwdnjU-Cdl3PbGfBehHZOMOR5tCI7M/createInvoiceLink);
+    Console.log(xhrURL)
+    xhrURL.searchParams.set('title', 'title');
+    xhrURL.searchParams.set('description', 'description');
+    xhrURL.searchParams.set('payload', 'some_invoice');
+    xhrURL.searchParams.set('provider_token', '381764678:TEST:84529');
+    xhrURL.searchParams.set('currency', 'rub');
+    xhrURL.searchParams.set('prices', '10000');
+    /* ... setting other non-private optional parameters */
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', xhrURL);
+    xhr.send();
+    xhr.onload = function() {
+        tg.openInvoice(JSON.parse(xhr.response).result);
+    }
 });
 
 let usercard = document.getElementById("usercard");
