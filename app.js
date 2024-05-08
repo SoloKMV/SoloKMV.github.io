@@ -81,7 +81,7 @@ let xhrURL = new URL('https://api.telegram.org/bot7003515026:AAFGUqHYmheoz-hppBT
     xhrURL.searchParams.set('payload', 'some_invoice');
     xhrURL.searchParams.set('provider_token', '381764678:TEST:84529');
     xhrURL.searchParams.set('currency', 'rub');
-    xhrURL.searchParams.set('prices', "[{"label": "My product", "amount": 999999}]");
+    xhrURL.searchParams.set('prices', '[{"label": "My product", "amount": 999999}]');
     /* ... setting other non-private optional parameters */
 
     let xhr = new XMLHttpRequest();
