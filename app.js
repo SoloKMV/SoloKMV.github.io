@@ -82,13 +82,13 @@ let xhrURL = new URL('https://api.telegram.org/bot7017599936:AAFu-ZwdnjU-Cdl3PbG
     xhrURL.searchParams.set('provider_token', '381764678:TEST:84529');
     xhrURL.searchParams.set('currency', 'rub');
     xhrURL.searchParams.set('prices', '10000');
-	Console.log(xhrURL)
+	console.log(xhrURL)
     /* ... setting other non-private optional parameters */
 
     let xhr = new XMLHttpRequest();
     xhr.open('GET', xhrURL);
     xhr.send();
-Console.log(JSON.parse(xhr.response).result)
+console.log(JSON.parse(xhr.response).result)
     xhr.onload = function() {
         tg.openInvoice(JSON.parse(xhr.response).result);
     }
