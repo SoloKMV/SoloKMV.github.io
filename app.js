@@ -75,20 +75,18 @@ btn6.addEventListener("click", function(){
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
     tg.showAlert(`Добро пожаловать!`);
-let xhrURL = new URL('https://api.telegram.org/bot7017599936:AAFu-ZwdnjU-Cdl3PbGfBehHZOMOR5tCI7M/createInvoiceLink');
+let xhrURL = new URL('https://api.telegram.org/bot7003515026:AAFGUqHYmheoz-hppBT25XXCJeOCTv8Yc3Y/createInvoiceLink');
     xhrURL.searchParams.set('title', 'title');
     xhrURL.searchParams.set('description', 'description');
     xhrURL.searchParams.set('payload', 'some_invoice');
     xhrURL.searchParams.set('provider_token', '381764678:TEST:84529');
     xhrURL.searchParams.set('currency', 'rub');
-    xhrURL.searchParams.set('prices', '10000');
-	console.log(xhrURL)
+    xhrURL.searchParams.set('prices', [{"label": "My product", "amount": 999999}]);
     /* ... setting other non-private optional parameters */
 
     let xhr = new XMLHttpRequest();
     xhr.open('GET', xhrURL);
     xhr.send();
-console.log(JSON.parse(xhr.response).result)
     xhr.onload = function() {
         tg.openInvoice(JSON.parse(xhr.response).result);
     }
