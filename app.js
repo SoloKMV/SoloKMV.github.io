@@ -89,7 +89,6 @@ if (item === "1") {
         price = '[{"label": "Строительный пылесос", "amount": 270000}]'
     }
 
-    tg.showAlert(`К покупке: ` + price);
 let xhrURL = new URL('https://api.telegram.org/bot7003515026:AAFGUqHYmheoz-hppBT25XXCJeOCTv8Yc3Y/createInvoiceLink');
     xhrURL.searchParams.set('title', 'title');
     xhrURL.searchParams.set('description', 'description');
