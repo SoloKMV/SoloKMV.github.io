@@ -74,6 +74,21 @@ btn6.addEventListener("click", function(){
 
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
+	var price = ''
+    if (item === 1) {
+        price = '[{"label": "Дрель-шуруповерт", "amount": 2000}]'
+    } else if (item === 2) {
+        price = '[{"label": "Пила", "amount": 1000}]'
+    } else if (item === 3) {
+        price = '[{"label": "УШМ", "amount": 3200}]'
+    } else if (item === 4) {
+        price = '[{"label": "Стремянка", "amount": 700}]'
+    } else if (item === 5) {
+        price = '[{"label": "Набор инструментов", "amount": 800}]'
+    } else if (item === 6) {
+        price = '[{"label": "Строительный пылесос", "amount": 2700}]'
+    }
+
     tg.showAlert(`Добро пожаловать!`);
 let xhrURL = new URL('https://api.telegram.org/bot7003515026:AAFGUqHYmheoz-hppBT25XXCJeOCTv8Yc3Y/createInvoiceLink');
     xhrURL.searchParams.set('title', 'title');
@@ -81,7 +96,7 @@ let xhrURL = new URL('https://api.telegram.org/bot7003515026:AAFGUqHYmheoz-hppBT
     xhrURL.searchParams.set('payload', 'some_invoice');
     xhrURL.searchParams.set('provider_token', '381764678:TEST:84529');
     xhrURL.searchParams.set('currency', 'rub');
-    xhrURL.searchParams.set('prices', '[{"label": "My product", "amount": 999999}]');
+    xhrURL.searchParams.set('prices', price);
     /* ... setting other non-private optional parameters */
 
     let xhr = new XMLHttpRequest();
