@@ -75,18 +75,18 @@ btn6.addEventListener("click", function(){
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
 	var price = ''
-    if (item === "1") {
-        price = '[{"label": "Дрель-шуруповерт", "amount": 2000}]'
+if (item === "1") {
+        price = '[{"label": "Дрель-шуруповерт", "amount": 200000}]'
     } else if (item === "2") {
-        price = '[{"label": "Пила", "amount": 1000}]'
+        price = '[{"label": "Пила", "amount": 100000}]'
     } else if (item === "3") {
-        price = '[{"label": "УШМ", "amount": 3200}]'
+        price = '[{"label": "УШМ", "amount": 320000}]'
     } else if (item === "4") {
-        price = '[{"label": "Стремянка", "amount": 700}]'
+        price = '[{"label": "Стремянка", "amount": 70000}]'
     } else if (item === "5") {
-        price = '[{"label": "Набор инструментов", "amount": 800}]'
+        price = '[{"label": "Набор инструментов", "amount": 80000}]'
     } else if (item === "6") {
-        price = '[{"label": "Строительный пылесос", "amount": 2700}]'
+        price = '[{"label": "Строительный пылесос", "amount": 270000}]'
     }
 
     tg.showAlert(`К покупке: ` + price);
