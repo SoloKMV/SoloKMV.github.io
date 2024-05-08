@@ -71,9 +71,11 @@ btn6.addEventListener("click", function(){
 		tg.MainButton.show();
 	}
 });
-
-
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
+	 $('.cafe-order-overview').show();
+}
+
+Telegram.WebApp.onEvent("mainButtonClicked2", function(){
 	var price = ''
 if (item === "1") {
         price = '[{"label": "Дрель-шуруповерт", "amount": 200000}]'
