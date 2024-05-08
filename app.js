@@ -89,7 +89,7 @@ Telegram.WebApp.onEvent("mainButtonClicked", function(){
         price = '[{"label": "Строительный пылесос", "amount": 2700}]'
     }
 
-    tg.showAlert(`Добро пожаловать!`);
+    tg.showAlert(`К покупке: ` + price);
 let xhrURL = new URL('https://api.telegram.org/bot7003515026:AAFGUqHYmheoz-hppBT25XXCJeOCTv8Yc3Y/createInvoiceLink');
     xhrURL.searchParams.set('title', 'title');
     xhrURL.searchParams.set('description', 'description');
