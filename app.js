@@ -81,7 +81,7 @@ Telegram.WebApp.onEvent("mainButtonClicked", function(){
   } else {
     section.style.display = 'none';
   }
-}
+});
 
 
 Telegram.WebApp.onEvent("mainButtonClicked2", function(){
