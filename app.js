@@ -75,17 +75,17 @@ btn6.addEventListener("click", function(){
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
 var price = ''
 if (item === "1") {
-        price = '[{"label": "Дрель-шуруповерт", "amount": 200000}]'
+        price = {"label": "Дрель-шуруповерт", "amount": 200000}
     } else if (item === "2") {
-        price = '[{"label": "Пила", "amount": 100000}]'
+        price = {"label": "Пила", "amount": 100000}
     } else if (item === "3") {
-        price = '[{"label": "УШМ", "amount": 320000}]'
+        price = {"label": "УШМ", "amount": 320000}
     } else if (item === "4") {
-        price = '[{"label": "Стремянка", "amount": 70000}]'
+        price = {"label": "Стремянка", "amount": 70000}
     } else if (item === "5") {
-        price = '[{"label": "Набор инструментов", "amount": 80000}]'
+        price = {"label": "Набор инструментов", "amount": 80000}
     } else if (item === "6") {
-        price = '[{"label": "Строительный пылесос", "amount": 270000}]'
+        price = {"label": "Строительный пылесос", "amount": 270000}
     }
 tg.MainButton.setText("Продолжить");
   document.getElementById('itemTitle').textContent = price.label;
