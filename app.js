@@ -73,6 +73,23 @@ btn6.addEventListener("click", function(){
 });
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
+var price = ''
+if (item === "1") {
+        price = '[{"label": "Дрель-шуруповерт", "amount": 200000}]'
+    } else if (item === "2") {
+        price = '[{"label": "Пила", "amount": 100000}]'
+    } else if (item === "3") {
+        price = '[{"label": "УШМ", "amount": 320000}]'
+    } else if (item === "4") {
+        price = '[{"label": "Стремянка", "amount": 70000}]'
+    } else if (item === "5") {
+        price = '[{"label": "Набор инструментов", "amount": 80000}]'
+    } else if (item === "6") {
+        price = '[{"label": "Строительный пылесос", "amount": 270000}]'
+    }
+tg.MainButton.setText("Продолжить");
+  document.getElementById('itemTitle').textContent = priceInfo.label;
+  document.getElementById('itemDescription').textContent = (priceInfo.amount / 100).toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' });
 	var section_main = document.querySelector('.second');
 	var section = document.querySelector('.cafe-order-overview');
   if (section.style.display === 'none') {
