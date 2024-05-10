@@ -71,9 +71,18 @@ btn6.addEventListener("click", function(){
 		tg.MainButton.show();
 	}
 });
+
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
-	 $('.cafe-order-overview').show();
+	var section_main = document.querySelector('.second');
+	var section = document.querySelector('.cafe-order-overview');
+  if (section.style.display === 'none') {
+	section_main.style.display = 'none'
+    section.style.display = 'block';
+  } else {
+    section.style.display = 'none';
+  }
 }
+
 
 Telegram.WebApp.onEvent("mainButtonClicked2", function(){
 	var price = ''
