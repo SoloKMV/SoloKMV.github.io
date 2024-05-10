@@ -89,7 +89,7 @@ if (item === "1") {
     }
 tg.MainButton.setText("Продолжить");
   document.getElementById('itemTitle').textContent = priceInfo.label;
-  document.getElementById('itemDescription').textContent = (priceInfo.amount / 100).toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' });
+  document.getElementById('itemPrice').textContent = (priceInfo / 100).toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' });
 	var section_main = document.querySelector('.second');
 	var section = document.querySelector('.cafe-order-overview');
   if (section.style.display === 'none') {
