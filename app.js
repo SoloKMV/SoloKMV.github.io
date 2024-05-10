@@ -88,8 +88,8 @@ if (item === "1") {
         price = '[{"label": "Строительный пылесос", "amount": 270000}]'
     }
 tg.MainButton.setText("Продолжить");
-  document.getElementById('itemTitle').textContent = priceInfo.label;
-  document.getElementById('itemPrice').textContent = (priceInfo / 100).toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' });
+  document.getElementById('itemTitle').textContent = price.label;
+  document.getElementById('itemPrice').textContent = (price.amount / 100).toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' });
 	var section_main = document.querySelector('.second');
 	var section = document.querySelector('.cafe-order-overview');
   if (section.style.display === 'none') {
