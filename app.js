@@ -123,10 +123,11 @@ if (item === "1") {
     }
 
 let xhrURL = new URL('https://api.telegram.org/bot7003515026:AAFGUqHYmheoz-hppBT25XXCJeOCTv8Yc3Y/createInvoiceLink');
-    xhrURL.searchParams.set('title', 'title');
-    xhrURL.searchParams.set('description', 'description');
+    xhrURL.searchParams.set('title', 'Покупка');
+    xhrURL.searchParams.set('description', 'Оборудование в аренду');
     xhrURL.searchParams.set('payload', 'some_invoice');
     xhrURL.searchParams.set('provider_token', '381764678:TEST:84529');
+	xhrURL.searchParams.set('shipping_address_requested', 'true');
     xhrURL.searchParams.set('currency', 'rub');
     xhrURL.searchParams.set('prices', price);
     /* ... setting other non-private optional parameters */
