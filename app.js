@@ -127,7 +127,11 @@ let xhrURL = new URL('https://api.telegram.org/bot7003515026:AAFGUqHYmheoz-hppBT
     xhrURL.searchParams.set('description', 'Оборудование в аренду');
     xhrURL.searchParams.set('payload', 'some_invoice');
     xhrURL.searchParams.set('provider_token', '381764678:TEST:84529');
-	xhrURL.searchParams.set('shipping_address_requested', 'true');
+    xhrURL.searchParams.set('need_phone_number', 'True');
+    xhrURL.searchParams.set('need_email', 'True');
+    xhrURL.searchParams.set('need_shipping_address', 'True');
+    xhrURL.searchParams.set('need_name', 'True');
+    xhrURL.searchParams.set('is_flexible', 'True');	
     xhrURL.searchParams.set('currency', 'rub');
     xhrURL.searchParams.set('prices', price);
     /* ... setting other non-private optional parameters */
