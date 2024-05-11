@@ -107,7 +107,7 @@ Buy();
 
 
 function Buy(){
-	var price = ''
+	var price = '';
 if (item === "1") {
         price = '[{"label": "Дрель-шуруповерт", "amount": 200000}]'
     } else if (item === "2") {
