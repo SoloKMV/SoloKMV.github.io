@@ -137,7 +137,7 @@ let xhrURL = new URL('https://api.telegram.org/bot7003515026:AAFGUqHYmheoz-hppBT
     xhr.onload = function() {
         tg.openInvoice(JSON.parse(xhr.response).result);
     }
-});
+}
 
 let usercard = document.getElementById("usercard");
 
