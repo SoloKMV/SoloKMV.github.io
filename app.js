@@ -87,7 +87,7 @@ if (item === "1") {
     } else if (item === "6") {
         price = {"label": "Строительный пылесос", "amount": 270000}
     }
-tg.MainButton.setText("Продолжить");
+  tg.MainButton.setText("Продолжить");
   document.getElementById('itemTitle').textContent = price.label;
   document.getElementById('itemPrice').textContent = (price.amount / 100).toLocaleString('ru-RU', { style: 'currency', currency: 'RUB' });
 	var section_main = document.querySelector('.second');
@@ -95,13 +95,18 @@ tg.MainButton.setText("Продолжить");
   if (section.style.display === 'none') {
 	section_main.style.display = 'none'
     section.style.display = 'block';
-  } else {
-    section.style.display = 'none';
+  } else
+  {
+Buy();
   }
 });
 
 
-Telegram.WebApp.onEvent("mainButtonClicked2", function(){
+
+
+
+
+function Buy(){
 	var price = ''
 if (item === "1") {
         price = '[{"label": "Дрель-шуруповерт", "amount": 200000}]'
